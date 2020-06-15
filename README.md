@@ -30,13 +30,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+You need to use the following syntax: class <Class Here> extends React.Component {<Code Here>}. If you will be passing props to other components, you also need to use the follwing syntax: constructor() {super()}. You will then set your state inside of the constructor function, beside super().
+
 2. Describe the different phases of the component lifecycle.
+
+The first phase, the Mounting Phase, is where the component begins. Here, the componentDidMount function is called. Next is the Updating Phase. As the title suggests, you update component data here. This is where you setState. Finally is the Unmounting Phase. The component is removed from the screen here.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+Mounting Phase- component begins here, componentDidMount() is called and is the location where state will be set, which will re-render the screen. Because of this, you can use constructor() and set state there, which will not re-render the screen.
+
+Updating Phase- component is update here, render() is called, which will examine props and state and return what the following code calls for. State should not be modified here.
+
+Unmounting Phase- component's lifecycle is ended here, componentWillUnmount() is called and the component will not re-render.
+
 4. Define stateful logic.
 
+Stateful logic is logic that holds state values and can also perform logical operations.
+
 5. Describe how to test a React component with React Testing Library.
+
+First, you need to install the React Testing Library. After that, make a file to hold the tests, this isn't necessary but it helps to reduce clutter in your files. Finally, open up the console and type npm run test. This will begin the testing, and everytime the project is saved the tests will run again and inform you if the test passes or fails.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
